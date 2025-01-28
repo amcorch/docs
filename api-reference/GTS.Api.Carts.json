@@ -1,0 +1,2748 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "GTS.Api.Carts",
+    "version": "1.0"
+  },
+  "paths": {
+    "/carts/{cartId}/discounts": {
+      "get": {
+        "tags": [
+          "CartDiscounts"
+        ],
+        "operationId": "GetCartDiscounts",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CartDiscounts"
+        ],
+        "operationId": "PostCartDiscounts",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Discounts.PostDiscountRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Discounts.PostDiscountRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Discounts.PostDiscountRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartDiscounts"
+        ],
+        "operationId": "DeleteCartDiscounts",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/discounts/{id}": {
+      "get": {
+        "tags": [
+          "CartDiscounts"
+        ],
+        "operationId": "GetCartDiscount",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartDiscounts"
+        ],
+        "operationId": "DeleteCartDiscount",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/extensions": {
+      "get": {
+        "tags": [
+          "CartExtensions"
+        ],
+        "operationId": "GetCartExtensions",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CartExtensions"
+        ],
+        "operationId": "PostCartExtension",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PostExtensionsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PostExtensionsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PostExtensionsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CartExtensions"
+        ],
+        "operationId": "PutCartExtensions",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutExtensionsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutExtensionsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutExtensionsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartExtensions"
+        ],
+        "operationId": "DeleteCartExtensions",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/extensions/{name}": {
+      "get": {
+        "tags": [
+          "CartExtensions"
+        ],
+        "operationId": "GetCartExtension",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CartExtensions"
+        ],
+        "operationId": "PutCartExtension",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutExtensionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutExtensionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutExtensionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartExtensions"
+        ],
+        "operationId": "DeleteCartExtension",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/guests": {
+      "get": {
+        "tags": [
+          "CartGuests"
+        ],
+        "operationId": "GetGuests",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CartGuests"
+        ],
+        "operationId": "PostGuests",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuestsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuestsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuestsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartGuests"
+        ],
+        "operationId": "DeleteGuests",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/guests/{id}": {
+      "get": {
+        "tags": [
+          "CartGuests"
+        ],
+        "operationId": "GetGuest",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CartGuests"
+        ],
+        "operationId": "PutGuest",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutGuestRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutGuestRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutGuestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartGuests"
+        ],
+        "operationId": "DeleteGuest",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/guests/primary": {
+      "get": {
+        "tags": [
+          "CartPrimaryGuest"
+        ],
+        "operationId": "GetPrimaryGuest",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CartPrimaryGuest"
+        ],
+        "operationId": "PostPrimaryGuest",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostPrimaryGuestRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostPrimaryGuestRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostPrimaryGuestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CartPrimaryGuest"
+        ],
+        "operationId": "PutPrimaryGuest",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutPrimaryGuestRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutPrimaryGuestRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutPrimaryGuestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartPrimaryGuest"
+        ],
+        "operationId": "DeletePrimaryGuest",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{productId}/extensions": {
+      "get": {
+        "tags": [
+          "CartProductExtensions"
+        ],
+        "operationId": "GetCartProductExtensions",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CartProductExtensions"
+        ],
+        "operationId": "PostCartProductExtension",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PostProductExtensionsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PostProductExtensionsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PostProductExtensionsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CartProductExtensions"
+        ],
+        "operationId": "PutCartProductExtensions",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutProductExtensionsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutProductExtensionsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutProductExtensionsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartProductExtensions"
+        ],
+        "operationId": "DeleteCartProductExtensions",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{productId}/extensions/{name}": {
+      "get": {
+        "tags": [
+          "CartProductExtensions"
+        ],
+        "operationId": "GetCartProductExtension",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CartProductExtensions"
+        ],
+        "operationId": "PutCartProductExtension",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutProductExtensionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutProductExtensionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.PutProductExtensionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartProductExtensions"
+        ],
+        "operationId": "DeleteCartProductExtension",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products": {
+      "get": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "GetCartProducts",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "PostCartProducts",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.PostProductSelectionsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.PostProductSelectionsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.PostProductSelectionsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "DeleteCartProducts",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{id}": {
+      "get": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "GetCartProduct",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "DeleteCartProduct",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{id}/quantity": {
+      "put": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "PutCartProductQuantity",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.PutProductQuantitySelectionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.PutProductQuantitySelectionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.PutProductQuantitySelectionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{id}/price": {
+      "put": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "PutCartProductPrice",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.PutProductPriceSelectionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.PutProductPriceSelectionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.PutProductPriceSelectionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{id}/guests": {
+      "post": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "PostCartProductGuest",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostProductGuestRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostProductGuestRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostProductGuestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "DeleteCartProductGuests",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{id}/guests/{guestId}": {
+      "put": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "PutCartProductGuest",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "guestId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutProductGuestRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutProductGuestRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutProductGuestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "DeleteCartProductGuest",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "guestId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{id}/members": {
+      "post": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "PostCartProductMember",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostProductMemberRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostProductMemberRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostProductMemberRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "DeleteCartProductMembers",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{id}/members/{memberId}": {
+      "put": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "PutCartProductMember",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "memberId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutProductMemberRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutProductMemberRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutProductMemberRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CartProducts"
+        ],
+        "operationId": "DeleteCartProductMember",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "memberId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{productId}/upselloptions": {
+      "get": {
+        "tags": [
+          "CartProductUpsellOptions"
+        ],
+        "operationId": "GetCartProductUpsellOptions",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{productId}/upselloptions/{optionId}": {
+      "get": {
+        "tags": [
+          "CartProductUpsellOptions"
+        ],
+        "operationId": "GetCartProductUpsellOption",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "optionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/products/{productId}/upsells": {
+      "post": {
+        "tags": [
+          "CartProductUpsellSelections"
+        ],
+        "operationId": "PostCartProductUpsellSelections",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Upsell.PostProductUpsellSelectionsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Upsell.PostProductUpsellSelectionsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Upsell.PostProductUpsellSelectionsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{id}": {
+      "get": {
+        "tags": [
+          "Carts"
+        ],
+        "operationId": "GetCart",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts": {
+      "post": {
+        "tags": [
+          "Carts"
+        ],
+        "operationId": "PostCart",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Carts.PostCartRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Carts.PostCartRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GTS.Dto.Pos.Carts.PostCartRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{id}/verify": {
+      "get": {
+        "tags": [
+          "Carts"
+        ],
+        "operationId": "VerifyCart",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/taxes": {
+      "get": {
+        "tags": [
+          "CartTaxes"
+        ],
+        "operationId": "GetCartTaxes",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/carts/{cartId}/taxes/{id}": {
+      "get": {
+        "tags": [
+          "CartTaxes"
+        ],
+        "operationId": "GetCartTax",
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GTS.Dto.NameValuePair": {
+        "required": [
+          "name",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "value": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Carts.NewCart": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "nodeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "salesProgramId": {
+            "type": "string",
+            "nullable": true
+          },
+          "salesChannelId": {
+            "type": "string",
+            "nullable": true
+          },
+          "localVisitDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "areTaxesDisabled": {
+            "type": "boolean"
+          },
+          "selections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.ProductSelection"
+            },
+            "nullable": true
+          },
+          "cartId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Carts.PostCartRequest": {
+        "required": [
+          "cart"
+        ],
+        "type": "object",
+        "properties": {
+          "cart": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Carts.NewCart"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Discounts.PostDiscount": {
+        "required": [
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Discounts.PostDiscountRequest": {
+        "required": [
+          "discount"
+        ],
+        "type": "object",
+        "properties": {
+          "discount": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Discounts.PostDiscount"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.Address": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "street1": {
+            "type": "string",
+            "nullable": true
+          },
+          "street2": {
+            "type": "string",
+            "nullable": true
+          },
+          "street3": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "province": {
+            "type": "string",
+            "nullable": true
+          },
+          "postalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PostGuest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "pattern": ".+@.+\\..+",
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true,
+            "readOnly": true
+          },
+          "titleId": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffixId": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.Address"
+          },
+          "attributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuestAttribute"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PostGuestAttribute": {
+        "required": [
+          "id",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "value": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PostGuestsRequest": {
+        "type": "object",
+        "properties": {
+          "guests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuest"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PostMember": {
+        "required": [
+          "relationshipTypeId",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "pattern": ".+@.+\\..+",
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true,
+            "readOnly": true
+          },
+          "titleId": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffixId": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.Address"
+          },
+          "attributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuestAttribute"
+            },
+            "nullable": true
+          },
+          "relationshipTypeId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/GTS.Foundation.Pos.MemberType"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PostPrimaryGuest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "pattern": ".+@.+\\..+",
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true,
+            "readOnly": true
+          },
+          "titleId": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffixId": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.Address"
+          },
+          "attributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuestAttribute"
+            },
+            "nullable": true
+          },
+          "optInSettings": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostPrimaryGuestOptInSettings"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PostPrimaryGuestOptInSettings": {
+        "type": "object",
+        "properties": {
+          "allowEmail": {
+            "type": "boolean"
+          },
+          "allowMailings": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PostPrimaryGuestRequest": {
+        "required": [
+          "guest"
+        ],
+        "type": "object",
+        "properties": {
+          "guest": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostPrimaryGuest"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PostProductGuestRequest": {
+        "required": [
+          "guest"
+        ],
+        "type": "object",
+        "properties": {
+          "guest": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuest"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PostProductMemberRequest": {
+        "required": [
+          "member"
+        ],
+        "type": "object",
+        "properties": {
+          "member": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostMember"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PutGuest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "pattern": ".+@.+\\..+",
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true,
+            "readOnly": true
+          },
+          "titleId": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffixId": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.Address"
+          },
+          "attributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuestAttribute"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PutGuestRequest": {
+        "required": [
+          "guest"
+        ],
+        "type": "object",
+        "properties": {
+          "guest": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutGuest"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PutMember": {
+        "required": [
+          "relationshipTypeId",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "pattern": ".+@.+\\..+",
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true,
+            "readOnly": true
+          },
+          "titleId": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffixId": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.Address"
+          },
+          "attributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuestAttribute"
+            },
+            "nullable": true
+          },
+          "relationshipTypeId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/GTS.Foundation.Pos.MemberType"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PutPrimaryGuestRequest": {
+        "required": [
+          "guest"
+        ],
+        "type": "object",
+        "properties": {
+          "guest": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostPrimaryGuest"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PutProductGuestRequest": {
+        "required": [
+          "guest"
+        ],
+        "type": "object",
+        "properties": {
+          "guest": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutGuest"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Guests.PutProductMemberRequest": {
+        "required": [
+          "member"
+        ],
+        "type": "object",
+        "properties": {
+          "member": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PutMember"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Products.PackageDetailSelection": {
+        "required": [
+          "productId"
+        ],
+        "type": "object",
+        "properties": {
+          "productId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "price": {
+            "minimum": 0,
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ticket": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.TicketSelection"
+          },
+          "guests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuest"
+            },
+            "nullable": true
+          },
+          "upsellSelections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Upsell.ProductUpsellSelection"
+            },
+            "nullable": true
+          },
+          "detailSequence": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Products.PackageSelection": {
+        "type": "object",
+        "properties": {
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.PackageDetailSelection"
+            },
+            "nullable": true
+          },
+          "priceMethod": {
+            "$ref": "#/components/schemas/GTS.Foundation.Pos.PackagePriceMethod"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Products.PostProductSelectionsRequest": {
+        "type": "object",
+        "properties": {
+          "selections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.ProductSelection"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Products.ProductPriceSelection": {
+        "required": [
+          "price"
+        ],
+        "type": "object",
+        "properties": {
+          "price": {
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Products.ProductQuantitySelection": {
+        "required": [
+          "quantity"
+        ],
+        "type": "object",
+        "properties": {
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Products.ProductSelection": {
+        "required": [
+          "productId"
+        ],
+        "type": "object",
+        "properties": {
+          "productId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "price": {
+            "minimum": 0,
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ticket": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.TicketSelection"
+          },
+          "guests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Guests.PostGuest"
+            },
+            "nullable": true
+          },
+          "upsellSelections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Upsell.ProductUpsellSelection"
+            },
+            "nullable": true
+          },
+          "package": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.PackageSelection"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Products.PutProductPriceSelectionRequest": {
+        "required": [
+          "selection"
+        ],
+        "type": "object",
+        "properties": {
+          "selection": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.ProductPriceSelection"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Products.PutProductQuantitySelectionRequest": {
+        "required": [
+          "selection"
+        ],
+        "type": "object",
+        "properties": {
+          "selection": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.ProductQuantitySelection"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Products.TicketSelection": {
+        "type": "object",
+        "properties": {
+          "localVisitDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "localStartDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "localEndDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "eventId": {
+            "type": "string",
+            "nullable": true
+          },
+          "resourceId": {
+            "type": "string",
+            "nullable": true
+          },
+          "capacityId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Upsell.PostProductUpsellSelectionsRequest": {
+        "type": "object",
+        "properties": {
+          "upsellSelections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Upsell.ProductUpsellSelection"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.Pos.Orders.Upsell.ProductUpsellSelection": {
+        "required": [
+          "optionId"
+        ],
+        "type": "object",
+        "properties": {
+          "optionId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "isDeclined": {
+            "type": "boolean"
+          },
+          "selection": {
+            "$ref": "#/components/schemas/GTS.Dto.Pos.Orders.Products.ProductSelection"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.PostExtensionsRequest": {
+        "type": "object",
+        "properties": {
+          "extensions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.NameValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.PostProductExtensionsRequest": {
+        "type": "object",
+        "properties": {
+          "extensions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.NameValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.PutExtensionRequest": {
+        "required": [
+          "extension"
+        ],
+        "type": "object",
+        "properties": {
+          "extension": {
+            "$ref": "#/components/schemas/GTS.Dto.NameValuePair"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.PutExtensionsRequest": {
+        "type": "object",
+        "properties": {
+          "extensions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.NameValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.PutProductExtensionRequest": {
+        "required": [
+          "extension"
+        ],
+        "type": "object",
+        "properties": {
+          "extension": {
+            "$ref": "#/components/schemas/GTS.Dto.NameValuePair"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Dto.PutProductExtensionsRequest": {
+        "type": "object",
+        "properties": {
+          "extensions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GTS.Dto.NameValuePair"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GTS.Foundation.Pos.MemberType": {
+        "enum": [
+          "ADULT",
+          "CHILD",
+          "GUEST",
+          "ADD_ON"
+        ],
+        "type": "string"
+      },
+      "GTS.Foundation.Pos.PackagePriceMethod": {
+        "enum": [
+          "PACKAGE_PRICING",
+          "SUM_OF_DETAILS"
+        ],
+        "type": "string"
+      }
+    }
+  }
+}
